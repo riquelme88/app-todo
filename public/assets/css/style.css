@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    transition: all ease-in 0.3s;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.bg-dark{
+    background-color:  hsl(235, 21%, 11%);
+}
+
+.bg-light{
+    background-color: hsl(0, 0%, 98%);
+}
+
+header{
+    width: 100vw;
+    height: 250px;
+}
+
+.bgImgDark{
+    background-image: url(/public/assets/images/bg-desktop-dark.jpg);
+    background-size: cover;
+}
+
+.bgImgLight{
+    background-image: url(/public/assets/images/bg-desktop-light.jpg);
+    background-size: cover;
+}
+
+main{
+    position: fixed;
+    margin-top: 60px;
+}
+
+.dark{
+    background-color: hsl(235, 24%, 19%);
+    color: white;
+}
+
+.light{
+    background-color: hsl(236, 33%, 92%);
+}
+
+.tittle-dark{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tittle-light{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tittle-dark div{
+    cursor: pointer;
+}
+
+.tittle-light div{
+    cursor: pointer;
+}
+
+.tittle-dark h1{
+    font-size: 40px;
+    color: white;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+}
+
+.tittle-light h1{
+    font-size: 40px;
+    color: white;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+}
+
+.img-dark{
+    background-image: url(/public/assets/images/icon-sun.svg);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+}
+
+.img-light{
+    background-image: url(/public/assets/images/icon-moon.svg);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+}
+
+form{
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+#create{
+    all: initial;
+    margin-left: 17px;
+    background-color: inherit;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #666;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+form input[type = "text"]{
+    background-color: inherit;
+    border: 0px;
+    width: 90%;
+    height: inherit;
+    margin-left: 5px;
+    padding-left: 10px;
+    outline: 0;
+    color: inherit;
+    font-size: 16px;
+}
+
+.container{
+    margin-top: 20px;
+    width: 40vw;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+.task{
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+.completed p{
+    text-decoration: line-through;
+    color: hsl(234, 11%, 52%);
+}
+
+.task input[type = 'checkbox']{
+    all: initial;
+    background-color: inherit;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #666;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.task input[type = 'checkbox']:checked{
+    background: linear-gradient(144deg,#00ddeb,#af40ff);
+    opacity: 0.9;
+    transition: all ease-in 0.5s;
+}
+
+.task p{
+    margin-left: 10px;
+}
+
+
+.config-tasks{
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    font-size: 13px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.config-tasks.dark{
+    color: hsl(234, 11%, 52%);
+}
+
+.config-tasks.light{
+    color: hsl(234, 11%, 52%);
+}
+
+.all-active{
+    display: flex;
+}
+
+.all-active p{
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.dark .all-active p:hover{
+    color: hsl(236, 33%, 92%);
+}
+
+.light .all-active p:hover{
+    color: hsl(235, 21%, 11%)
+}
+
+#clear:hover{
+    color: hsl(236, 33%, 92%);
+    cursor: pointer;
+}
+
+.active{
+    color: hsl(220, 98%, 61%);
+}
+
+.task img{
+    position: absolute;
+    margin-left: 90%;
+    display: none;
+}
+.trash{
+    display: none;
+}
+
+@media screen and (min-width: 1920px) {
+    header{
+        height: 300px;
+    }
+
+    main{
+        margin-top: 80px;
+    }
+
+    form{
+        height: 60px;
+    }
+    .task{
+        padding: 25px;
+        font-size: 17px;
+    }
+
+    .config-tasks{
+        padding: 25px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 538px;
+    }
+
+    .config-tasks{
+        padding: 22px;
+        font-size: 15px;
+    }
+
+    .all-active{
+        position: absolute;
+        margin-top: 50px;
+        background-color: hsl(235, 24%, 19%);
+        width: 100%;
+        margin-left: -22px;
+        padding: 15px;
+        justify-content: space-evenly;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .container{
+        width: 90vw;
+        font-size: 0.8rem;
+    }  
+
+    .task img{
+        margin-left: 85%;
+    }
+
+    .tittle-dark h1,.tittle-light h1{
+        font-size: 2rem;
+    }
+
+    
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Todo app</title>
+</head>
+<body class="bg-dark">
+    <header class="bgImgDark"></header>
+    <main>
+        <div class="tittle-dark">
+            <h1>Todo</h1>
+            <div onclick="visualMode()" class="img-dark"></div>
+        </div>
+        <form action="" class="dark">
+            <input type="checkbox" id="create" onclick="addTask(event)">
+            <input type="text" placeholder="Create a new todo...">
+        </form>
+        <div class="container dark">
+            <div class="task completed">
+                <input type="checkbox" checked = 'checked'>
+                <p class="task-text">Complete online JavaScript Course</p>
+                <img src="/public/assets/images/icon-cross.svg" alt="">
+            </div>
+            <div class="task">
+                <input type="checkbox">
+                <p class="task-text">Jag around the park 3x</p>
+                <img src="/public/assets/images/icon-cross.svg" alt="">
+            </div>
+            <div class="task">
+                <input type="checkbox">
+                <p class="task-text">10 minutes meditation</p>
+                <img src="/public/assets/images/icon-cross.svg" alt="">
+            </div>
+            <div class="task">
+                <input type="checkbox">
+                <p class="task-text">Read for 1 hour</p>
+                <img src="/public/assets/images/icon-cross.svg" alt="">
+            </div>
+            <div class="task">
+                <input type="checkbox">
+                <p class="task-text">Pick up graceries</p>
+                <img src="/public/assets/images/icon-cross.svg" alt="">
+            </div>
+            <div class="task">
+                <input type="checkbox">
+                <p class="task-text">Complete Todo App on Frontend Mentor</p>
+                <img src="/public/assets/images/icon-cross.svg" alt="">
+            </div>
+        </div>
+        <div class="config-tasks dark">
+            <p id="itens-left">5 items left</p>
+            <div class="all-active">
+                <p onclick="allItems()" class="active">All</p>
+                <p onclick="activeItems()">Active</p>
+                <p onclick="completedItems()">Completed</p>
+            </div>
+            <p onclick="clearCompleted()" id="clear">Clear Completed</p>
+        </div>
+    </main>
+    <script src="/public/assets/js/script.js"></script>
+</body>
+</html>
